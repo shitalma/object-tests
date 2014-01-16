@@ -224,4 +224,38 @@ public class PersonTest {
             one.add(p3);
             assertEquals(3,one.size());
         }
+
+// -------------------  Test cases for checking ArrayList for the different type casting --------------
+    @Test(expected = java.lang.ClassCastException.class)
+    public void testGivesExceptionWhenTryingToGetStringInsteadOfObjectFromList() throws ClassCastException {
+        ArrayList list = new ArrayList<String>();
+        list.add(new Object());
+        list.add(new Object());
+        String a = (String)list.get(0);
     }
+
+    @Test(expected = java.lang.ClassCastException.class)
+    public void testGivesExceptionWhenTryingToGetIntegerInsteadOfObjectFromList() throws ClassCastException {
+        ArrayList list = new ArrayList<String>();
+        list.add(new Object());
+        list.add(new Object());
+        Integer a = (Integer)list.get(0);
+    }
+
+    @Test(expected = java.lang.ClassCastException.class)
+    public void testGivesExceptionWhenTryingToGetFloatInsteadOfObjectFromList() throws ClassCastException {
+        ArrayList list = new ArrayList<String>();
+        list.add(new Object());
+        list.add(new Object());
+        Float a = (Float)list.get(0);
+    }
+
+    @Test(expected = java.lang.ClassCastException.class)
+    public void testGivesExceptionWhenTryingToGetDoubleInsteadOfObjectFromList() throws ClassCastException {
+        ArrayList list = new ArrayList<String>();
+        list.add(new Object());
+        list.add(new Object());
+        Double a = (Double)list.get(0);
+    }
+}
+
